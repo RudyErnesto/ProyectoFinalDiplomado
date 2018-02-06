@@ -1,17 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Proyecto Final Diplomando 2017</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+    <h2>Mapa de Eventos</h2>
+    <div id="map_canvas"></div>
+    <h2>Lista de eventos</h2>
+    <ion-list>
+        <h1>Mapa   "en lugar de la bandera se mostrara el mapa"</h1>
+        <ion-content class="card-background-page">
+            <ion-card ion-item *ngFor="let mapa of mapas">
+              <img src={{mapa.flag}}/>
+              <div class="card-title"> {{mapa.name}} </div>
+              <div class="card-subtitle">{{mapa.capital}}</div>
+            </ion-card>
+          </ion-content>
+      </ion-list>
+    
+
+  
 </ion-content>
